@@ -9,7 +9,7 @@ import random
 from datetime import datetime
 
 # Локальный адрес Loki
-LOKI_URL = "http://localhost:3100/loki/api/v1/push"
+LOKI_URL = "http://127.0.0.1:43100/loki/api/v1/push"
 APP_NAME = "crypto-app"
 
 
