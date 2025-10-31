@@ -51,7 +51,7 @@ curl http://127.0.0.1:43100/ready   # ожидаемо: ready
 ### 2) Подключение к Grafana
 - Перейдите: `http://127.0.0.1:43000`
 - Логин/пароль: `admin`/`admin`
-- Источник данных Loki создаётся автоматически (URL `http://127.0.0.1:43100`). При необходимости можно проверить в Grafana: Connections → Data sources → Loki → Save & test.
+- Источник данных Loki создаётся автоматически (URL `http://loki:3100` внутри Docker‑сети). Если настраиваете вручную через UI, можно использовать внешний адрес `http://127.0.0.1:43100`.
 
 ### 3) Запуск тестового приложения
 ```bash
@@ -91,7 +91,7 @@ python grafana-loki-stack/app.py
 - `activity`: `trading|user-activity|system|validation`
 
 ### Конфигурация Grafana Data Source
-`grafana-loki-stack/grafana-datasource.yaml`:
+`grafana-loki-stack/grafana-datasource.yaml` (внутри контейнера Grafana):
 
 ```startLine:endLine:grafana-loki-stack/grafana-datasource.yaml
 apiVersion: 1
@@ -100,7 +100,7 @@ datasources:
   - name: Loki
     type: loki
     access: proxy
-    url: http://127.0.0.1:43100
+    url: http://loki:3100
     isDefault: true
     jsonData:
       maxLines: 1000
@@ -166,7 +166,7 @@ MIT — см. `LICENSE`.
 
 ## Автор и контакты
 
- - **Имя**: Georgy Belyanin
+- **Имя**: Georgy Belyanin
 - **Локация**: Russia, Moscow
 - **Email**: georgy.belyanin@gmail.com
 - **Telegram**: https://t.me/Ergon73

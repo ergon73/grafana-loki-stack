@@ -7,10 +7,18 @@ import requests
 import time
 import random
 from datetime import datetime
+import sys
 
 # Локальный адрес Loki
 LOKI_URL = "http://127.0.0.1:43100/loki/api/v1/push"
 APP_NAME = "crypto-app"
+
+# Гарантируем корректную кодировку вывода в разных терминалах (Windows/Unix)
+try:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 
 
 class CryptoBackend:
