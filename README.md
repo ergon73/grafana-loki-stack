@@ -166,8 +166,7 @@ MIT — см. `LICENSE`.
 
 ## Автор и контакты
 
-- **Имя**: Georgy Belyanin (`ergon73`, he/him)
-- **Роль/экспертиза**: R&D инженер; Vibe Coding практик; Prompt Engineering; AI‑assisted dev (Cursor, Claude); DevOps, мониторинг, автоматизация
+ - **Имя**: Georgy Belyanin
 - **Локация**: Russia, Moscow
 - **Email**: georgy.belyanin@gmail.com
 - **Telegram**: https://t.me/Ergon73
