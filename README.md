@@ -162,3 +162,13 @@ sum by (level) (count_over_time({job="crypto-app"}[5m]))
 ## Лицензия
 MIT — см. `LICENSE`.
 
+---
+
+## Автор и контакты
+
+- **Имя**: Georgy Belyanin (`ergon73`, he/him)
+- **Роль/экспертиза**: R&D инженер; Vibe Coding практик; Prompt Engineering; AI‑assisted dev (Cursor, Claude); DevOps, мониторинг, автоматизация
+- **Локация**: Russia, Moscow
+- **Email**: georgy.belyanin@gmail.com
+- **Telegram**: https://t.me/Ergon73
+
